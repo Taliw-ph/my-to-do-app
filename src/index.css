@@ -1,0 +1,62 @@
+* {
+  font-family: "Kodchasan", sans-serif;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100dvw;
+  height: 100dvh;
+
+  background-color: #f5f5f5;
+  color: #333;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  border: solid 2px coral;
+  border-radius: 12px;
+  padding-bottom: 1.5rem;
+  overflow: hidden;
+
+  #title {
+    margin: 0;
+    padding: 0.75rem 0.5rem;
+    background-color: coral;
+    text-align: end;
+  }
+
+  .form {
+    input {
+      padding: 0.5rem;
+      border: solid 1px coral;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: coral;
+      color: #f5f5f5;
+      border: none;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
+    }
+  }
+
+  #content {
+    margin: 1.5rem;
+  }
+}
+
+/* dark mode with media query */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+    color: #f5f5f5;
+  }
+}
