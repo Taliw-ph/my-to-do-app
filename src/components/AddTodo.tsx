@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface AddTodoProps {
   onAddTask: (text: string) => void;
@@ -6,6 +6,7 @@ interface AddTodoProps {
 
 const AddTodo = ({ onAddTask }: AddTodoProps) => {
   const [text, setText] = useState<string>("");
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const onTextChange = (event: React.ChangeEvent<HTMLInputElement>) =>
     setText(event.target.value);
@@ -15,11 +16,17 @@ const AddTodo = ({ onAddTask }: AddTodoProps) => {
     if (newTask === "") return;
     onAddTask(text);
     setText("");
+    inputRef.current?.focus();
   };
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
 
   return (
     <div className="form">
       <input
+        ref={inputRef}
         type="text"
         id="todo-input"
         placeholder="Enter your todo"
