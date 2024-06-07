@@ -31,7 +31,7 @@ body {
     float: left;
   }
 
-  li a {
+  li div {
     display: block;
     color: white;
     text-align: center;
@@ -39,7 +39,7 @@ body {
     text-decoration: none;
   }
 
-  li a:hover:not(.active) {
+  li div:hover:not(.active) {
     background-color: coral;
   }
 

@@ -1,16 +1,30 @@
-// import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { PATH } from "../router";
 
 const NavBar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const { pathname } = location;
+
   return (
     <div className="nav">
       <ul>
         <li>
-          <a href="/home" className="active">
+          <div
+            className={pathname === PATH.home ? "active" : ""}
+            onClick={() => navigate(PATH.home)}
+          >
             Go To Home
-          </a>
+          </div>
         </li>
         <li>
-          <a href="/to-do">Go To App</a>
+          <div
+            className={pathname === PATH.todo ? "active" : ""}
+            onClick={() => navigate(PATH.todo)}
+          >
+            Go To App
+          </div>
         </li>
       </ul>
     </div>
