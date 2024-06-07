@@ -1,9 +1,13 @@
-import TodoApp from "./components/TodoApp";
+import NavBar from "./components/NavBar";
+// import HomePage from "./pages/HomePage";
+import TodoPage from "./pages/TodoPage";
 
 function App() {
   return (
     <>
-      <TodoApp />
+      <NavBar />
+      <TodoPage />
+      {/* <HomePage /> */}
     </>
   );
 }
