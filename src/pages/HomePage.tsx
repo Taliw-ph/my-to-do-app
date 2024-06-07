@@ -1,7 +1,13 @@
 const HomePage = () => {
   return (
     <div className="container">
-      <h1>Mader Gaming</h1>
+      <h1
+        style={{
+          color: "coral",
+        }}
+      >
+        Mader Gaming
+      </h1>
       <ul>
         <li>Taliw</li>
         <li>Alun</li>

@@ -1,13 +1,12 @@
+import { RouterProvider } from "react-router-dom";
 import NavBar from "./components/NavBar";
-// import HomePage from "./pages/HomePage";
-import TodoPage from "./pages/TodoPage";
+import { router } from "./router";
 
 function App() {
   return (
     <>
       <NavBar />
-      <TodoPage />
-      {/* <HomePage /> */}
+      <RouterProvider router={router} fallbackElement={<p>Loading ...</p>} />
     </>
   );
 }

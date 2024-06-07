@@ -1,14 +1,16 @@
+// import { useLocation } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <div className="nav">
       <ul>
         <li>
-          <a href="/" className="active">
+          <a href="/home" className="active">
             Go To Home
           </a>
         </li>
         <li>
-          <a href="/">Go To App</a>
+          <a href="/to-do">Go To App</a>
         </li>
       </ul>
     </div>
