@@ -10,6 +10,10 @@ export const PATH = {
 
 export const router = createBrowserRouter([
   {
+    path: "*",
+    element: <Navigate to={PATH.home} replace />,
+  },
+  {
     element: <AppLayout />,
     children: [
       {
@@ -21,9 +25,5 @@ export const router = createBrowserRouter([
         element: <TodoPage />,
       },
     ],
-  },
-  {
-    path: "*",
-    element: <Navigate to={PATH.home} replace />,
   },
 ]);
